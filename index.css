@@ -1,0 +1,14 @@
+.footer {
+	text-align: right;
+}
+
+.perfect_box {
+	width: 50px;
+	height: 100px;
+	color: brown;
+	border: coral dashed;
+}
+
+pre.code {
+	font: monospace;
+}
