@@ -13,6 +13,37 @@ body {
 	margin-right: 20%;
 }
 
+#MMDContainer {
+	width: 60%;
+	height: 300px;
+}
+
+#controller2 {
+	width: 40%;
+	height: 300px;
+	overflow: scroll;
+	overflow-x: hidden;
+	float: right;
+}
+
+div.center {
+	text-align: center;
+}
+
+table {
+	border: solid 1px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: solid 1px;
+}
+
+input.morph_slider {
+	width: 90%;
+}
+
 h1 {
 	margin-left: 20%;
 	margin-right: 20%;

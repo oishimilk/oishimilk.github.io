@@ -1,0 +1,2 @@
+Pin: libs/mmdparser.js
+Mod: loaders/MMDLoader.js
