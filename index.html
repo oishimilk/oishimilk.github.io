@@ -53,6 +53,9 @@ __________
             ||----w |
             ||     ||
 		</pre>
+		<p>
+			Powered by <code>cowsay</code>
+		</p>
 	</section>
 </article>
 
@@ -170,21 +173,27 @@ __________
 		<script src="launchpad2/js/init.js"></script>
 		<script>
 			document.open();
-			document.write("Powered by <tt><a href=\"https://threejs.org/\">Three.js r" + THREE.REVISION + "</a></tt>");
+			document.write("<p>Powered by <tt><a href=\"https://threejs.org/\">Three.js r" + THREE.REVISION + "</a></tt></p>");
 			document.close();
 
 			function launch() {
 				// Initiate function or other initializations here
 				Ammo(); // 物理演算開始
-				//loadMMDModel("launchpad2/model/momiji_marching.pmx")
+				loadMMDModel("launchpad2/model/momiji_marching.pmx")
 				MMDRenderLoop(); // Start render loop
 			}
 		</script>
 
-		<input type="button" value="Start WebGL Renderer (may slow down your device)" onclick="this.disabled = true; launch();">
+		<div class="center">
+			<input class="center_big_button" type="button" value="Start WebGL Renderer (may slow down your device)" onclick="this.disabled = true; launch();">
+		</div>
 
 		<p>
+			モデルは自作です。
 			公開のため無効化したシェイプキー（モーフ）があります。
+		</p>
+		<p>
+			This model is my own work.
 			Some shape keys (morphs) were disabled for publication.
 		</p>
 	</section>

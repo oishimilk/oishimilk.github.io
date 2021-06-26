@@ -24,6 +24,7 @@ body {
 	overflow: scroll;
 	overflow-x: hidden;
 	float: right;
+	font-size: small;
 }
 
 div.center {
@@ -42,6 +43,10 @@ th, td {
 
 input.morph_slider {
 	width: 90%;
+}
+
+input.center_big_button {
+	font-size: large;
 }
 
 h1 {
