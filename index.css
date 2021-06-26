@@ -1,14 +1,35 @@
 .footer {
 	text-align: right;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#main_article {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+h1 {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+h2 {
+	border-bottom: gray dashed 2px;
+	background-color: cornsilk;
 }
 
 .perfect_box {
 	width: 50px;
 	height: 100px;
 	color: brown;
-	border: coral dashed;
+	border: coral solid;
 }
 
-pre.code {
-	font: monospace;
+.perfect_box p {
+	position: absolute;
+}
+
+code {
+	font-family: monospace;
 }
