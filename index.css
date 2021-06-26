@@ -1,3 +1,7 @@
+body {
+	background-color: linen;
+}
+
 .footer {
 	text-align: right;
 	margin-left: 20%;
@@ -24,12 +28,15 @@ h2 {
 	height: 100px;
 	color: brown;
 	border: coral solid;
+	border-radius: 1em;
 }
 
 .perfect_box p {
 	position: absolute;
+	margin-left: 10px;
 }
 
-code {
-	font-family: monospace;
+pre.cowsay {
+	font-family: 'Courier New', monospace;
+	background-color: whitesmoke;
 }
