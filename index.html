@@ -117,7 +117,7 @@ __________
 							<input type="checkbox" onclick="toggleCameraAsLight(this.checked);" title="カメラが動くと光源も動きます。">カメラは光源
 							<input type="checkbox" onclick="MMDGridHelper.visible = this.checked; MMDAxesHelper.visible = this.checked;" title="座標軸を表示します。" checked>座標軸
 							<br>
-							<input type="checkbox" id="performMMDRenderLoop" onclick="MMDRenderLoop();" title="レンダループを回します。" checked>レンダリング
+							<input type="checkbox" id="performMMDRenderLoop" onclick="MMDRenderLoop();" title="レンダループを回します。" disabled>レンダリング
 						</td>
 					</tr>
 					<tr>
@@ -158,7 +158,7 @@ __________
 					<tr>
 						<th>全体</th>
 						<td>
-							<input type="checkbox" onclick="MMDHelper.enabled.animation = this.checked;" title="アニメーションを有効化します。" checked>動作
+							<input type="checkbox" onclick="MMDHelper.enabled.animation = this.checked;" title="アニメーションを有効化します。" checked disabled>動作
 							<input type="checkbox" onclick="MMDHelper.enabled.ik = this.checked;" title="IK (Inverse Kinematics) 演算を有効化します。" checked>IK
 							<input type="checkbox" onclick="MMDHelper.enabled.physics = this.checked;" title="物理演算を有効化します。" checked>物理演算
 						</td>
@@ -179,7 +179,8 @@ __________
 			function launch() {
 				// Initiate function or other initializations here
 				Ammo(); // 物理演算開始
-				loadMMDModel("launchpad2/model/momiji_marching.pmx")
+				loadMMDModel("launchpad2/model/momiji_marching.pmx");
+				performMMDRenderLoop.checked = true;
 				MMDRenderLoop(); // Start render loop
 			}
 		</script>
