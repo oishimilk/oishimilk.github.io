@@ -3,213 +3,175 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="generator" content="手打ちうどん">
-	<meta name="author" content="oishimilk">
+	<meta name="generator" content="手打ちうどんなのだ">
+	<meta name="author" content="oishimilk / Quail">
 	<meta name="template" content="そんなものはない">
 
 	<link rel="stylesheet" type="text/css" href="index.css">
 
-	<title>&#x1f426; フロントエンド完全に理解した（わかってない） &#x1f426;</title>
-
-	<!--以下は launchpad2 用です-->
-	<script src="launchpad2/js/three.js"></script>
-	
-	<script src="launchpad2/js/libs/ammo.js"></script>
-	<script src="launchpad2/js/libs/mmdparser.js"></script>
-
-	<script src="launchpad2/js/loaders/TGALoader.js"></script>
-	<script src="launchpad2/js/loaders/MMDLoader.js"></script>
-	<script src="launchpad2/js/effects/OutlineEffect.js"></script>
-	<script src="launchpad2/js/animation/CCDIKSolver.js"></script>
-	<script src="launchpad2/js/animation/MMDPhysics.js"></script>
-	<script src="launchpad2/js/animation/MMDAnimationHelper.js"></script>
-
-	<script src="launchpad2/js/controls/OrbitControls.js"></script>
-	<script src="launchpad2/js/controls/TrackballControls.js"></script>
-
-	<script src="launchpad2/js/WebGL.js"></script>
-	<script src="launchpad2/js/libs/stats.min.js"></script>
+	<title>&#x1f42e; oishimilk / Quail &#x1f426;</title>
 </head>
 
 <body>
 
-<h1>&#x1f426; フロントエンド完全に理解した（わかってない） &#x1f426;</h1>
+<div class="header">
+	<img src="images/logo_201905_transparent_bright.png" alt="クッソダサいロゴ" title="おしゃれなフォントが台無し" class="logo">
 
-<article id="main_article">
-※このページの内容は冗談です。This is just a joke.
+	<a href="#history" title="恥の多い生涯を送って来ました。" class="header_link">略歴</a>
+	<a href="#habit" title="興味ないね" class="header_link">趣味</a>
+	<a href="#gallery" title="SGDs に反してるよね" class="header_link">ごみ置き場</a>
+	<a href="#special_thanks" title="いつもお世話になっております。" class="header_link">謝辞</a>
+	<a href="#contact" title="コミュ障だからやめて" class="header_link">連絡先</a>
+</div>
 
+<div class="main">
+
+<div class="center">
+	<img src="images/AIcon.png" title="ニューラルネットワークに描いてもらった自画像" alt="ニューラルネットワークに描いてもらった自画像">
+
+	<h1>&#x1f42e; oishimilk / Quail &#x1f426;</h1>
+
+	<blockquote cite="https://twitter.com/oishimilk">Python だいすき（Python 要素はありません）</blockquote>
+</div>
+
+<a name="history"></a>
 <article>
 	<header>
-		<h2>&#x1f426; HTML 完全に理解した（わかってない）</h2>
+		<h2>&#x1f426; 略歴</h2>
 	</header>
 	<section class="main">
-		<pre class="cowsay">
-__________
-&lt; 理解した &gt;
-----------
-    \   ^__^
-     \  (oo)\_______
-    	(__)\       )\/\
-            ||----w |
-            ||     ||
-		</pre>
-		<p>
-			Powered by <code>cowsay</code>
-		</p>
+		<table>
+			<tr>
+				<th>めっちゃ昔</th>
+				<td>
+					換気扇で遊んでいたら感電しました。
+					<!--
+						換気扇・扇風機・エアコンの屋外機等の回転物に夢中になる。
+						換気扇で遊んでいて感電する。
+						電池でモーターが回ることや豆電球が光ることに衝撃を受け、電気に目覚める。
+						創作を始める。
+					-->
+				</td>
+			</tr>
+
+			<tr>
+				<th>かなり昔</th>
+				<td>
+					スピーカーを自作したりプログラミングに手を出したりしました。
+					ヒメウズラに出会いました。
+					<!--
+						電気つながりでスピーカーとパソコンに目覚める。
+						7cm のユニット P700 でスピーカーを自作する。
+						ASUS の EeePC S101 を購入する。
+						バッチファイルや HTML を書き始め、日本語プログラミング言語「なでしこ」に出会い、画像処理ソフトを作成する。
+						BLOODY M◯NDAY のドラマを見て中二病を発症し Ubuntu に手を出す。
+						ヒメウズラに取り憑かれ、名前を Quail に決める。
+					-->
+				</td>
+			</tr>
+
+			<tr>
+				<th>だいぶ昔</th>
+				<td>
+					トランジスタや真空管を使ってアンプを作りました。安定化電源を作りましたがゴミと間違えられ捨てられました。
+					<!--
+						eMachines の EL1850-A22C/T を購入する。
+						FF225WK と FT17H でスピーカーを自作する。
+						充電◯から摘出した 2N3055 で初めてのアンプを自作する。
+						出力± 20V 5A の安定化電源を自作するもゴミと間違えられ廃棄される。
+						なぜか MIDI シーケンサーをいじり始める。
+						three.js に出会う。
+					-->
+				</td>
+			</tr>
+
+			<tr>
+				<th>まあまあ昔</th>
+				<td>
+					Blender はじめました。ニューラルネットワークはじめました。
+					<!--
+						Blender に出会う。
+						け◯フレに出会う。
+						モデリングに夢中になり、自動化のため Python を書き始める。
+						Blender 2.80 を動かすため EL1850-A22C/T に GT710 を導入する。
+						H8 や FPGA と<s>殴り合い</s>対話を行う。
+						切り抜き芸人になるため、<abbr title="Convolutional Neural Network">CNN</abbr> と<s>和解交渉</s>殴り合いを始める。
+						諸事情により GitHub を始める。
+					-->
+				</td>
+			</tr>
+
+			<!--
+				<tr>
+					<th>少し昔</th>
+					<td>
+						「ピ◯チュウ、5まんボルト!」と叫んでも（一応）怒られないようになり調子に乗る。
+						ジャパリパークがざわついているのをきっかけに、痛いことにキャラクターデザインを自分で始めてしまう。
+						CNN との乱闘の様子が（あろうことか）評価されてしまい、完全に勘違いする。	
+					</td>
+				</tr>
+
+				<tr>
+					<th>現在</th>
+					<td>各方面からボコボコにされ、紆余曲折を経て首の皮一枚つながった状態で現在に至る。</td>
+				</tr>
+			-->
+		</table>
 	</section>
 </article>
 
+<a name="habit"></a>
 <article>
 	<header>
-		<h2>&#x1f426; JavaScript 完全に理解した（わかってない）</h2>
-	</header>
-	<section>
-		<textarea id="js_test"></textarea>
-		<script>
-			function write_text() {
-				const text = document.getElementById("js_test");
-				text.innerHTML += "わかった";
-			}
-		</script>
-		<br>
-		<input type="button" onclick="write_text()" value="わかった？">
-	</section>
-</article>
-
-<article>
-	<header>
-		<h2>&#x1f426; CSS 完全に理解した（わかってない）</h2>
+		<h2>&#x1f426; 趣味</h2>
 	</header>
 	<section class="main">
-		<div class="perfect_box">
-			<p>
-				I've understood CSS perfectly.
-				<!--It means I've just started learning CSS.-->
-			</p>
-		</div>
+		<p>
+			だいたい Blender をいじっているかプログラムを書いているか電子回路をいじっているかスピーカーをいじっています。
+		</p>
 	</section>
 </article>
 
+<a name="gallery"></a>
 <article>
 	<header>
-		<h2>&#x1f426; three.js 完全に理解した（わかってない）</h2>
+		<h2>&#x1f426; ごみ置き場</h2>
 	</header>
 	<section class="main">
 		<p>
-			Blender と MMD と GIMP と Python と Make も完全に理解した（わかってない）
-		</p>
-		<div id="controller2">
-			<div class="center">
-				操作盤 ver4.5.2019.01.04.26<br>
-				<a href="javascript:void(SceneManipulator.hidden = !SceneManipulator.hidden);" title="シーン制御/操作盤を開閉します。">シーン制御/表示盤 開閉</a>
-					/ 
-				<a href="javascript:void(console.log(MMDScene));" title="シーンをコンソールに出力します。">デバッグ</a>
-			</div>
-			<div id="SceneManipulator">
-				<table>
-					<tr>
-						<th>設定</th>
-						<td>
-							<input type="checkbox" onclick="MMDScene.visible = this.checked;" title="シーンをレンダリングの対象とします。" checked>表示
-							<input type="checkbox" onclick="MMDOutlineEffector.enabled = this.checked;" title="輪郭線を表示します(霧と非互換です)。" checked>輪郭
-							<input type="checkbox" onclick="toggleSceneFog(this.checked);" title="霧を表示します(輪郭線と非互換です)。">&#9888;霧
-							<input type="checkbox" onclick="MMDRenderer.shadowMap.enabled = this.checked; MMDLight.castShadow = this.checked;" title="影を落とします。先にモデル設定の影を有効化してください。">影
-							<br>
-							<input type="checkbox" onclick="toggleCameraAsLight(this.checked);" title="カメラが動くと光源も動きます。">カメラは光源
-							<input type="checkbox" onclick="MMDGridHelper.visible = this.checked; MMDAxesHelper.visible = this.checked;" title="座標軸を表示します。" checked>座標軸
-							<br>
-							<input type="checkbox" id="performMMDRenderLoop" onclick="MMDRenderLoop();" title="レンダループを回します。" disabled>レンダリング
-						</td>
-					</tr>
-					<tr>
-						<th>色</th>
-						<td>
-							背景<input type="color" onchange="changeSceneColor(this.value, 'background');"><br>
-							照明<input type="color" onchange="changeSceneColor(this.value, 'light');"><br>
-							環境<input type="color" onchange="changeSceneColor(this.value, 'ambient');"><br>
-						</td>
-					</tr>
-					<tr>
-						<th>重<br>力<br>加<br>速<br>度</th><!--してはいけない-->
-						<td>
-							X: <input type="number" id="gravityX" step="0.1" oninput="changeGravity();" value="0">m/s<sup>2</sup><br>
-							Y: <input type="number" id="gravityY" step="0.1" oninput="changeGravity();" value="-98.1">m/s<sup>2</sup><br>
-							Z: <input type="number" id="gravityZ" step="0.1" oninput="changeGravity();" value="0">m/s<sup>2</sup><br>
-						</td>
-					</tr>
-					<tr>
-						<th>情報</th>
-						<td>
-							<a href="javascript:void(console.log(MMDRenderer.info));" title="WebGLRenderer の動作状況をコンソールに出力します。">レンダラーの動作状況</a>
-							/
-							<a href="javascript:void(console.log(MMDScene.children));" title="シーンに登録されている中身をコンソールに出力します。">シーンの中身</a>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<hr>
-			
-			<div class="center">
-				<a href="javascript:void(ModelManipulator.hidden = !ModelManipulator.hidden);" title="モデル制御/操作盤を開閉します。">モデル制御/表示盤 開閉</a>
-					/ 
-				<a href="javascript:void(console.log(MMDHelper));" title="モデルをコンソールに出力します。">デバッグ</a>
-			</div>
-			<div id="ModelManipulator">
-				<table>
-					<tr>
-						<th>全体</th>
-						<td>
-							<input type="checkbox" onclick="MMDHelper.enabled.animation = this.checked;" title="アニメーションを有効化します。" checked disabled>動作
-							<input type="checkbox" onclick="MMDHelper.enabled.ik = this.checked;" title="IK (Inverse Kinematics) 演算を有効化します。" checked>IK
-							<input type="checkbox" onclick="MMDHelper.enabled.physics = this.checked;" title="物理演算を有効化します。" checked>物理演算
-						</td>
-					</tr>
-				</table>
-				<!--以下にモデルがいっぱいきます。-->
-			</div>
-		</div>
-		<div id="MMDContainer"></div>
-
-		<script src="launchpad2/js/menu/4.0/menu.js"></script>
-		<script src="launchpad2/js/init.js"></script>
-		<script>
-			document.open();
-			document.write("<p>Powered by <tt><a href=\"https://threejs.org/\">Three.js r" + THREE.REVISION + "</a></tt></p>");
-			document.close();
-
-			function launch() {
-				// Initiate function or other initializations here
-				Ammo(); // 物理演算開始
-				loadMMDModel("launchpad2/model/momiji_marching.pmx");
-				performMMDRenderLoop.checked = true;
-				MMDRenderLoop(); // Start render loop
-			}
-		</script>
-
-		<div class="center">
-			<input class="center_big_button" type="button" value="Start WebGL Renderer (may slow down your device)" onclick="this.disabled = true; launch();">
-		</div>
-
-		<p>
-			モデルは自作<!--の男の子-->です。
-			公開のため無効化したシェイプキー（モーフ）があります。
-		</p>
-		<p>
-			This model is my own work <!--and it's male-->.
-			Some shape keys (morphs) were disabled for publication.
-		</p>
-		<p>
-			<code>metal.spa.png</code> was generated from <a href="https://polyhaven.com/a/en_suite">en_suite</a>,
-			and <code>latex.sph.png</code> was generated from <a href="https://polyhaven.com/a/moonless_golf">moonless_golf</a>.
+			準備中です。
 		</p>
 	</section>
 </article>
 
+<a name="special_thanks"></a>
+<article>
+	<header>
+		<h2>&#x1f426; 謝辞</h2>
+	</header>
+	<section class="main">
+		<p>
+			準備中です。
+		</p>
+	</section>
 </article>
+
+<a name="contact"></a>
+<article>
+	<header>
+		<h2>&#x1f426; 連絡先</h2>
+	</header>
+	<section class="main">
+		<p>
+			ご苦情やご質問等は <a href="https://github.com/oishimilk/oishimilk/issues" title="草枯れる">GitHub</a> または <a href="https://twitter.com/oishimilk" title="炎上不可避">Twitter</a> までお願いします。
+		</p>
+	</section>
+</article>
+
+</div>
 
 <div class="footer">
-	<hr>
-	Thank you for visiting - Copyright &copy; 2021 oishimilk. Some rights reserved.
+	Thank you for visiting - Copyright &copy; 2021-2022 oishimilk (Quail). Some rights reserved.
 </div>
 
 </body>

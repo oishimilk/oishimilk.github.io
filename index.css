@@ -1,78 +1,64 @@
+/* 恥ずかしいから見ないで */
+
 body {
-	background-color: linen;
+	/* 60 文字分 */
+	max-width: 60em;
+
+	/* 上、左右、下 */
+	margin: 5em auto 1em;
 }
 
-.footer {
+div.footer {
+	position: absolute;
+	left: 0px;
+	right: 0px;
 	text-align: right;
-	margin-left: 20%;
-	margin-right: 20%;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
-#main_article {
-	margin-left: 20%;
-	margin-right: 20%;
-}
+div.header {
+	background-color: rgba(48, 40, 51, 0.9);
+	color: azure;
 
-#MMDContainer {
-	width: 60%;
-	height: 300px;
-}
-
-#controller2 {
-	width: 40%;
-	height: 300px;
-	overflow: scroll;
-	overflow-x: hidden;
-	float: right;
-	font-size: small;
+	/* 画面上部に固定 */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 div.center {
 	text-align: center;
 }
 
+a.header_link {
+	color: azure;
+	padding: 0.5em;
+}
+
+img.logo {
+	/* 続く文字を垂直方向の中央に */
+	vertical-align: middle;
+
+	height: 3em;
+	margin: 0.5em;
+}
+
 table {
-	border: solid 1px;
 	border-collapse: collapse;
-	width: 100%;
 }
 
 th, td {
-	border: solid 1px;
+	text-align: left;
+	padding: 0.5em;
 }
 
-input.morph_slider {
-	width: 90%;
-}
-
-input.center_big_button {
-	font-size: large;
-}
-
-h1 {
-	margin-left: 20%;
-	margin-right: 20%;
+th {
+	min-width: 6em;
 }
 
 h2 {
 	border-bottom: gray dashed 2px;
 	background-color: cornsilk;
-}
-
-.perfect_box {
-	width: 50px;
-	height: 100px;
-	color: brown;
-	border: coral solid;
-	border-radius: 1em;
-}
-
-.perfect_box p {
-	position: absolute;
-	margin-left: 10px;
-}
-
-pre.cowsay {
-	font-family: 'Courier New', monospace;
-	background-color: whitesmoke;
 }
