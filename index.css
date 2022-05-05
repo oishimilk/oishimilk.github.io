@@ -54,6 +54,7 @@ img.logo {
 
 .round {
 	border-radius: 1em;
+	box-shadow: 0.1em 0.1em rgba(200, 200, 200, 0.8);
 }
 
 table {
@@ -71,7 +72,7 @@ th {
 
 h2 {
 	border-bottom: gray dashed 2px;
-	background-color: cornsilk;
+	background-color: antiquewhite;
 }
 
 h3 {
