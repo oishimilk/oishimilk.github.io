@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" type="text/css" href="index.css">
 
-	<title>&#x1f426; Launchpad V2</title>
+	<title>&#x1f426; Launchpad V2 - 起動中</title>
 
 	<script src="js/three.js"></script>
 	
@@ -121,6 +121,8 @@
 			document.write("<p>Powered by <tt><a href=\"https://threejs.org/\">Three.js r" + THREE.REVISION + "</a></tt></p>");
 			document.close();
 		</script>
+
+		<img src="../images/logo_201905_transparent_dark.png" alt="クッソダサいロゴ" title="クッソダサいロゴ" onclick="console.log('このロゴダサい... ダサくない?');" class="logo">
 	</div>
 
 	<script src="js/menu/4.0/menu.js"></script>
@@ -134,6 +136,7 @@
 			loadMMDModel("model/momiji_marching.pmx");
 			performMMDRenderLoop.checked = true;
 			MMDRenderLoop(); // Start render loop
+			document.title = "🐦 Launchpad V2";
 		})();
 	</script>
 </body>
