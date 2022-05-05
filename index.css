@@ -6,6 +6,8 @@ body {
 
 	/* 上、左右、下 */
 	margin: 5em auto 1em;
+
+	background-color: #eee;
 }
 
 div.footer {
@@ -15,6 +17,11 @@ div.footer {
 	text-align: right;
 	padding-top: 1em;
 	padding-bottom: 1em;
+}
+
+div.main {
+	background-color: #fafafa;
+	padding: 1em;
 }
 
 div.header {
@@ -45,6 +52,10 @@ img.logo {
 	margin: 0.5em;
 }
 
+.round {
+	border-radius: 1em;
+}
+
 table {
 	border-collapse: collapse;
 }
@@ -61,4 +72,13 @@ th {
 h2 {
 	border-bottom: gray dashed 2px;
 	background-color: cornsilk;
+}
+
+h3 {
+	border-bottom: gray dotted 2px;
+	background-color: antiquewhite;
+}
+
+ul.parallel {
+	column-count: 2;
 }
