@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="手打ちうどん">
+	<meta name="author" content="oishimilk / Quail">
+	<meta name="template" content="ねぇよそんなもん">
+
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<title>&#x1f426; Launchpad V2</title>
+
+	<script src="js/three.js"></script>
+	
+	<script src="js/libs/ammo.js"></script>
+	<script src="js/libs/mmdparser.js"></script>
+
+	<script src="js/loaders/TGALoader.js"></script>
+	<script src="js/loaders/MMDLoader.js"></script>
+	<script src="js/effects/OutlineEffect.js"></script>
+	<script src="js/animation/CCDIKSolver.js"></script>
+	<script src="js/animation/MMDPhysics.js"></script>
+	<script src="js/animation/MMDAnimationHelper.js"></script>
+
+	<script src="js/controls/OrbitControls.js"></script>
+	<script src="js/controls/TrackballControls.js"></script>
+
+	<script src="js/WebGL.js"></script>
+	<script src="js/libs/stats.min.js"></script>
+</head>
+
+<body>
+	<div id="controller2">
+		<div class="center">
+			操作盤 ver4.5.2019.01.04.26<br>
+			<a href="javascript:void(SceneManipulator.hidden = !SceneManipulator.hidden);" title="シーン制御/操作盤を開閉します。">シーン制御/表示盤 開閉</a>
+				/ 
+			<a href="javascript:void(console.log(MMDScene));" title="シーンをコンソールに出力します。">デバッグ</a>
+		</div>
+		<div id="SceneManipulator">
+			<table>
+				<tr>
+					<th>設定</th>
+					<td>
+						<input type="checkbox" onclick="MMDScene.visible = this.checked;" title="シーンをレンダリングの対象とします。" checked>表示
+						<input type="checkbox" onclick="MMDOutlineEffector.enabled = this.checked;" title="輪郭線を表示します(霧と非互換です)。" checked>輪郭
+						<input type="checkbox" onclick="toggleSceneFog(this.checked);" title="霧を表示します(輪郭線と非互換です)。">&#9888;霧
+						<input type="checkbox" onclick="MMDRenderer.shadowMap.enabled = this.checked; MMDLight.castShadow = this.checked;" title="影を落とします。先にモデル設定の影を有効化してください。">影
+						<br>
+						<input type="checkbox" onclick="toggleCameraAsLight(this.checked);" title="カメラが動くと光源も動きます。">カメラは光源
+						<input type="checkbox" onclick="MMDGridHelper.visible = this.checked; MMDAxesHelper.visible = this.checked;" title="座標軸を表示します。" checked>座標軸
+						<br>
+						<input type="checkbox" id="performMMDRenderLoop" onclick="MMDRenderLoop();" title="レンダループを回します。" disabled>レンダリング
+					</td>
+				</tr>
+				<tr>
+					<th>色</th>
+					<td>
+						背景<input type="color" onchange="changeSceneColor(this.value, 'background');"><br>
+						照明<input type="color" onchange="changeSceneColor(this.value, 'light');"><br>
+						環境<input type="color" onchange="changeSceneColor(this.value, 'ambient');"><br>
+					</td>
+				</tr>
+				<tr>
+					<th>重<br>力<br>加<br>速<br>度</th><!--してはいけない-->
+					<td>
+						X: <input type="number" id="gravityX" step="0.1" oninput="changeGravity();" value="0">m/s<sup>2</sup><br>
+						Y: <input type="number" id="gravityY" step="0.1" oninput="changeGravity();" value="-98.1">m/s<sup>2</sup><br>
+						Z: <input type="number" id="gravityZ" step="0.1" oninput="changeGravity();" value="0">m/s<sup>2</sup><br>
+					</td>
+				</tr>
+				<tr>
+					<th>情報</th>
+					<td>
+						<a href="javascript:void(console.log(MMDRenderer.info));" title="WebGLRenderer の動作状況をコンソールに出力します。">レンダラーの動作状況</a>
+						/
+						<a href="javascript:void(console.log(MMDScene.children));" title="シーンに登録されている中身をコンソールに出力します。">シーンの中身</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr>
+		
+		<div class="center">
+			<a href="javascript:void(ModelManipulator.hidden = !ModelManipulator.hidden);" title="モデル制御/操作盤を開閉します。">モデル制御/表示盤 開閉</a>
+				/ 
+			<a href="javascript:void(console.log(MMDHelper));" title="モデルをコンソールに出力します。">デバッグ</a>
+		</div>
+		<div id="ModelManipulator">
+			<table>
+				<tr>
+					<th>全体</th>
+					<td>
+						<input type="checkbox" onclick="MMDHelper.enabled.animation = this.checked;" title="アニメーションを有効化します。" checked disabled>動作
+						<input type="checkbox" onclick="MMDHelper.enabled.ik = this.checked;" title="IK (Inverse Kinematics) 演算を有効化します。" checked>IK
+						<input type="checkbox" onclick="MMDHelper.enabled.physics = this.checked;" title="物理演算を有効化します。" checked>物理演算
+					</td>
+				</tr>
+			</table>
+			<!--以下にモデルがいっぱいきます。-->
+		</div>
+
+		<hr>
+
+		<p>
+			モデルは自作<!--の男の子-->です。
+			公開のため無効化したシェイプキー（モーフ）があります。
+		</p>
+		<p>
+			This model is my own work <!--and it's male-->.
+			Some shape keys (morphs) were disabled for publication.
+		</p>
+		<p>
+			<code>metal.spa.png</code> was generated from <a href="https://polyhaven.com/a/en_suite">en_suite</a>,
+			and <code>latex.sph.png</code> was generated from <a href="https://polyhaven.com/a/moonless_golf">moonless_golf</a>.
+		</p>
+		
+		<script>
+			document.open();
+			document.write("<p>Powered by <tt><a href=\"https://threejs.org/\">Three.js r" + THREE.REVISION + "</a></tt></p>");
+			document.close();
+		</script>
+	</div>
+
+	<script src="js/menu/4.0/menu.js"></script>
+	<script src="js/init.js"></script>
+	
+	<script>
+		// JavaScript 特有の IIFE
+		(function () {
+			// Initiate function or other initializations here
+			Ammo(); // 物理演算開始
+			loadMMDModel("model/momiji_marching.pmx");
+			performMMDRenderLoop.checked = true;
+			MMDRenderLoop(); // Start render loop
+		})();
+	</script>
+</body>
+</html>

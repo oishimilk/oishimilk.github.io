@@ -2,7 +2,8 @@ const MMDModelInformationArray = {};
 const MMDAnimationArray = {};
 const MMDAnimationInformationArray = {};
 
-const MMDContainer = document.getElementById("MMDContainer");
+const MMDContainer = document.createElement( 'div' );
+document.body.appendChild( MMDContainer );
 
 // MMDScene
 
@@ -26,8 +27,8 @@ MMDLight.position.set(0, 10, 0);
 MMDScene.add( MMDLight );
 
 const MMDCameraOffset = new THREE.Object3D();
-const MMDCamera = new THREE.PerspectiveCamera( 45, MMDContainer.clientWidth / MMDContainer.clientHeight, 1, 2000 );
-const Camera = new THREE.PerspectiveCamera( 45, MMDContainer.clientWidth / MMDContainer.clientHeight, 1, 2000 );
+const MMDCamera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+const Camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
 const ActiveCamera = Camera;
 MMDCameraOffset.add( MMDCamera );
 MMDScene.add( MMDCameraOffset );
@@ -38,7 +39,7 @@ Camera.position.set(0, 10, 30);
 
 const MMDRenderer = new THREE.WebGLRenderer( { antialias: true } );
 MMDRenderer.setPixelRatio( window.devicePixelRatio );
-MMDRenderer.setSize( MMDContainer.clientWidth, MMDContainer.clientHeight );
+MMDRenderer.setSize( window.innerWidth, window.innerHeight );
 MMDContainer.appendChild( MMDRenderer.domElement );
 
 const MMDOutlineEffector = new THREE.OutlineEffect( MMDRenderer );
@@ -60,13 +61,13 @@ MMDHelper.add(MMDCamera);
 window.addEventListener( 'resize', onWindowResize, false );
 
 function onWindowResize() {
-	Camera.aspect = MMDContainer.clientWidth / MMDContainer.clientHeight;
-	MMDCamera.aspect = MMDContainer.clientWidth / MMDContainer.clientHeight;
+	Camera.aspect = window.innerWidth / window.innerHeight;
+	MMDCamera.aspect = window.innerWidth / window.innerHeight;
 	
 	Camera.updateProjectionMatrix();
 	MMDCamera.updateProjectionMatrix();
 
-	MMDOutlineEffector.setSize( MMDContainer.clientWidth, MMDContainer.clientHeight );
+	MMDOutlineEffector.setSize( window.innerWidth, window.innerHeight );
 }
 
 //
